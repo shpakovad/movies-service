@@ -1,0 +1,15 @@
+@use '../../../../lib/styles/variables' as *;
+
+.header-container {
+  @include font-display-header;
+  height: 56px;
+  display: flex;
+  align-items: center;
+
+  a:first-child {
+    padding-right: 10px;
+    &.active {
+      color: $LIGHT_GRAY;
+    }
+  }
+}
