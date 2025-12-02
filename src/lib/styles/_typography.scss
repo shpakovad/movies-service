@@ -1,0 +1,65 @@
+@use "./colors" as *;
+
+$FONT_FAMILY_PRIMARY: "PT Sans", sans-serif;
+$FONT_FAMILY_SECONDARY: "Bebas Neue", sans-serif;
+
+$FONT_SIZE_XXL: 200px;
+$FONT_SIZE_XL: 56px;
+$FONT_SIZE_L: 25px;
+$FONT_SIZE_M: 20px;
+$FONT_SIZE_S: 14px;
+
+$FONT_SIZE_XL_MOBILE: 42px;
+
+$FONT_WEIGHT_BOLD: 700;
+$FONT_WEIGHT_REGULAR: 400;
+$FONT_WEIGHT_LIGHT: 300;
+
+$LINE_HEIGHT_NORMAL: 1.2;
+$LINE_HEIGHT_RELAXED: 1.5;
+$LINE_HEIGHT_BIG: 160px;
+
+@mixin font-display-extra-large {
+  font-size: $FONT_SIZE_XXL;
+  font-weight: $FONT_WEIGHT_BOLD;
+  line-height: $LINE_HEIGHT_BIG;
+  font-variant-numeric: tabular-nums;
+}
+
+@mixin font-display-large {
+  font-size: $FONT_SIZE_XL;
+  font-weight: $FONT_WEIGHT_BOLD;
+  line-height: $LINE_HEIGHT_NORMAL;
+  color: $BLACK_BLUE;
+  stroke: $BLACK;
+  font-variant-numeric: tabular-nums;
+}
+
+@mixin font-heading {
+  font-size: $FONT_SIZE_M;
+  font-weight: $FONT_WEIGHT_BOLD;
+  line-height: $LINE_HEIGHT_NORMAL;
+  text-transform: uppercase;
+}
+
+@mixin font-year {
+  font-family: $FONT_FAMILY_SECONDARY;
+  font-size: $FONT_SIZE_L;
+  line-height: $LINE_HEIGHT_NORMAL;
+  font-variant-numeric: tabular-nums;
+}
+
+@mixin font-description {
+  font-size: $FONT_SIZE_M;
+  line-height: $LINE_HEIGHT_NORMAL;
+  font-variant-numeric: tabular-nums;
+}
+
+@mixin font-display-large-mobile {
+  font-size: $FONT_SIZE_XL_MOBILE;
+  font-weight: $FONT_WEIGHT_BOLD;
+  line-height: $LINE_HEIGHT_NORMAL;
+  color: $BLACK_BLUE;
+  stroke: $BLACK;
+  font-variant-numeric: tabular-nums;
+}
