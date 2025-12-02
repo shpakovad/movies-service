@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
-import './globals.scss';
 import HeaderPage from '@/app/components/layout/Header/HeaderPage';
+import './globals.scss';
 
 const robotoSans = Roboto({
   variable: '--font-geist-sans',
