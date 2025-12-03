@@ -3,12 +3,16 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { HEADER_ITEMS } from '@/constants/constants';
+import { useGetMovieByIdQuery } from '@/lib/api/tvmazeApi';
 import './HeaderContainer.scss';
+
 
 export const HeaderPage = () => {
   const pathname = usePathname();
   const activeLink = (path: string) => pathname === path;
 
+  const { data, error, isLoading } = useGetMovieByIdQuery('5584');
+  console.log(data);
   return (
     <div className="header-container">
       <nav>
