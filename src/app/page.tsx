@@ -1,8 +1,4 @@
+import MainPage from '@/app/main/MainPage';
 export default function Home() {
-  return (
-    <div>
-      <main>hello</main>
-      <footer>bye</footer>
-    </div>
-  );
+  return <MainPage />;
 }

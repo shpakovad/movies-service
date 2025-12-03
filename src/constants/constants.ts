@@ -4,3 +4,6 @@ export const HEADER_ITEMS = [
 ];
 
 export const MOVIES_API = 'https://api.tvmaze.com/';
+
+export const POPULAR_SERIES = ['269', '430', '19', '431', '84836', '527', '169', '335'];
+export const SEEING_NOW_MOVIES = ['62271', '87959', '52336', '42846'];

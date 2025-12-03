@@ -3,7 +3,7 @@ import { Roboto } from 'next/font/google';
 import HeaderPage from '@/app/components/layout/Header/HeaderPage';
 import { StoreProvided } from '@/lib/providers/storeProvider';
 import './globals.scss';
-
+import { AntdRegistry } from '@ant-design/nextjs-registry';
 const robotoSans = Roboto({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={`${robotoSans.variable}`}>
         <StoreProvided>
           <HeaderPage />
-          <main>{children}</main>
+          <AntdRegistry>{children}</AntdRegistry>
         </StoreProvided>
       </body>
     </html>

@@ -2,8 +2,7 @@
 
 $FONT_FAMILY_PRIMARY: 'Roboto', sans-serif;
 
-$FONT_SIZE_XXL: 200px;
-$FONT_SIZE_XL: 56px;
+$FONT_SIZE_XL: 32px;
 $FONT_SIZE_L: 25px;
 $FONT_SIZE_M: 16px;
 $FONT_SIZE_S: 14px;
@@ -20,6 +19,15 @@ $LINE_HEIGHT_RELAXED: 1.5;
   font-size: $FONT_SIZE_M;
   font-weight: $FONT_WEIGHT_BOLD;
   line-height: $LINE_HEIGHT_NORMAL;
+  color: $color;
+  font-variant-numeric: tabular-nums;
+}
+
+@mixin font-display-title($color: $WHITE) {
+  font-family: $FONT_FAMILY_PRIMARY;
+  font-size: $FONT_SIZE_XL;
+  font-weight: $FONT_WEIGHT_BOLD;
+  line-height: $LINE_HEIGHT_RELAXED;
   color: $color;
   font-variant-numeric: tabular-nums;
 }
