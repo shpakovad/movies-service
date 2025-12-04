@@ -1,14 +1,15 @@
 'use client';
 
-import { useGetMovieByIdQuery } from '@/lib/api/tvmazeApi';
+import {useGetMoviesByIdsQuery} from '@/lib/api/tvmazeApi';
 import { SEEING_NOW_MOVIES } from '@/constants/constants';
 import SeeingNow from '@/app/main/components/SeeingNow';
 import Loading from '@/app/components/ui/Loading/Loading';
+
 import './MainPage.scss';
 
-
 export default function MainPage() {
-  const { data, error, isLoading } = useGetMovieByIdQuery(SEEING_NOW_MOVIES[0]);
+
+const {data, isLoading, error } = useGetMoviesByIdsQuery(SEEING_NOW_MOVIES)
 
   return (
     <div className="main-container">
@@ -17,7 +18,7 @@ export default function MainPage() {
       ) : error || !data ? (
         <span>Something went wrong...</span>
       ) : (
-        <SeeingNow movie={data} />
+        <SeeingNow movies={data} />
       )}
     </div>
   );
