@@ -83,7 +83,7 @@ export default function MoviePage() {
                 const person = item.person.name;
                 console.log(item);
                 return (
-                  <span key={item.person.id}>
+                  <span key={`${item.person.id}-${item.character.id}`}>
                     {person}
                     {index < catsData.length - 1 && ', '}
                   </span>
