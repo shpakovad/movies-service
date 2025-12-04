@@ -49,5 +49,12 @@
     button {
       margin-top: 2rem;
     }
+    .show-more-btn {
+      button {
+        background: none !important;
+        border: 1px solid $WHITE;
+        margin-left: 1rem;
+      }
+    }
   }
 }

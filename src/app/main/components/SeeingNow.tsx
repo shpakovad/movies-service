@@ -1,9 +1,9 @@
 'use client';
 
 import { Button, Carousel, Image } from 'antd';
+import { CaretRightOutlined, DashOutlined } from '@ant-design/icons';
 import { Movie } from '@/types/movie.interface';
 import { getYearFromString } from '@/lib/utils/dateUtils';
-import { CaretRightOutlined } from '@ant-design/icons';
 
 import './SeeingNow.scss';
 
@@ -46,6 +46,11 @@ export default function SeeingNow({ movies }: Props) {
                   <a href={url} target="_blank" rel="noopener noreferrer">
                     <Button type="primary" icon={<CaretRightOutlined />}>
                       Watch now
+                    </Button>
+                  </a>
+                  <a href={url} target="_blank" rel="noopener noreferrer" className="show-more-btn">
+                    <Button type="primary" icon={<DashOutlined />}>
+                      Show more
                     </Button>
                   </a>
                 </div>
