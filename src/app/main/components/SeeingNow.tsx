@@ -4,6 +4,7 @@ import { Button, Carousel, Image } from 'antd';
 import { CaretRightOutlined, DashOutlined } from '@ant-design/icons';
 import { Movie } from '@/types/movie.interface';
 import { getYearFromString } from '@/lib/utils/dateUtils';
+import LinkButton from '@/app/components/ui/LinkButton/LinkButton';
 
 import './SeeingNow.scss';
 
@@ -14,7 +15,7 @@ export default function SeeingNow({ movies }: Props) {
   return (
     <Carousel effect="fade" autoplay={{ dotDuration: true }}>
       {movies.map((item) => {
-        const { name, url, image, premiered, genres, network } = item;
+        const { name, url, image, premiered, genres, network, id } = item;
         const movieYear = getYearFromString(premiered);
 
         return (
@@ -43,16 +44,24 @@ export default function SeeingNow({ movies }: Props) {
                   ))}
                 </div>
                 <div>
-                  <a href={url} target="_blank" rel="noopener noreferrer">
-                    <Button type="primary" icon={<CaretRightOutlined />}>
-                      Watch now
-                    </Button>
-                  </a>
-                  <a href={url} target="_blank" rel="noopener noreferrer" className="show-more-btn">
-                    <Button type="primary" icon={<DashOutlined />}>
-                      Show more
-                    </Button>
-                  </a>
+                  <LinkButton
+                    href={url}
+                    isNewWindow
+                    children={
+                      <Button type="primary" icon={<CaretRightOutlined />}>
+                        Watch now
+                      </Button>
+                    }
+                  />
+                  <LinkButton
+                    href={`/movies/${item.id}`}
+                    className="show-more-btn"
+                    children={
+                      <Button type="primary" icon={<DashOutlined />}>
+                        Show more
+                      </Button>
+                    }
+                  />
                 </div>
               </div>
             </div>

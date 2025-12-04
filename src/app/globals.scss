@@ -44,6 +44,7 @@ a {
 }
 
 button {
+  padding: 10px;
   background: linear-gradient(45deg, $VIOLET, $FUCHSIA, $VIOLET) !important;
   &:hover {
     opacity: 0.8;

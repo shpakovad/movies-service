@@ -1,9 +1,12 @@
+import '@ant-design/v5-patch-for-react-19';
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import HeaderPage from '@/app/components/layout/Header/HeaderPage';
-import { StoreProvided } from '@/lib/providers/storeProvider';
+import { StoreProvider } from '@/lib/providers/StoreProvider';
+import { AntDesignProviders } from '@/lib/providers/AntDesignProviders';
+
 import './globals.scss';
-import { AntdRegistry } from '@ant-design/nextjs-registry';
+
 const robotoSans = Roboto({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -22,10 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${robotoSans.variable}`}>
-        <StoreProvided>
+        <StoreProvider>
           <HeaderPage />
-          <AntdRegistry>{children}</AntdRegistry>
-        </StoreProvided>
+          <AntDesignProviders children={children} />
+        </StoreProvider>
       </body>
     </html>
   );
