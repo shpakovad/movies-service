@@ -1,10 +1,11 @@
 'use client';
 
-import './Trending.scss';
+import { Col, Row } from 'antd';
 import { Movie } from '@/types/movie.interface';
 import MovieCard from '@/app/components/ui/MovieCard/MovieCard';
 import { getYearFromString } from '@/lib/utils/dateUtils';
-import { Col, Row } from 'antd';
+
+import './Trending.scss';
 
 interface Props {
   data: Movie[];
