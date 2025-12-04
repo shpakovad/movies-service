@@ -81,8 +81,9 @@ export default function MoviePage() {
               </b>
               {catsData.map((item: ICast, index: number) => {
                 const person = item.person.name;
+                console.log(item);
                 return (
-                  <span key={person}>
+                  <span key={item.person.id}>
                     {person}
                     {index < catsData.length - 1 && ', '}
                   </span>

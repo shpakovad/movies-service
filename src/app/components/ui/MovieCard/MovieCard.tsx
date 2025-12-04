@@ -10,17 +10,20 @@ import './MovieCard.scss';
 interface Props {
   movieYear: number;
   movie: Movie;
+  containerStyle?: object;
+  canWatch?: boolean;
 }
-export default function MovieCard({ movie, movieYear }: Props) {
+export default function MovieCard({
+  movie,
+  movieYear,
+  containerStyle = {},
+  canWatch = true,
+}: Props) {
   const { name, url, image, genres, network, id } = movie;
 
   return (
-    <div
-      key={name}
-      className="movie-card-container"
-      style={{ backgroundImage: `url(${image.original})` }}
-    >
-      <Image src={image.medium} alt="poster" preview={false} />
+    <div key={name} className="movie-card-container" style={containerStyle}>
+      <Image src={image.medium} alt="poster" preview={false} className="poster" />
 
       <div className="description">
         <div className="name">{name}</div>
@@ -39,15 +42,17 @@ export default function MovieCard({ movie, movieYear }: Props) {
           ))}
         </div>
         <div>
-          <LinkButton
-            href={url}
-            isNewWindow
-            children={
-              <Button type="primary" icon={<CaretRightOutlined />}>
-                Watch now
-              </Button>
-            }
-          />
+          {canWatch && (
+            <LinkButton
+              href={url}
+              isNewWindow
+              children={
+                <Button type="primary" icon={<CaretRightOutlined />}>
+                  Watch now
+                </Button>
+              }
+            />
+          )}
           <LinkButton
             href={`/movies/${id}`}
             className="show-more-btn"

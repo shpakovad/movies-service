@@ -2,8 +2,89 @@
 
 .trending-container {
   @include font-display-header;
-  margin-top: 6rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
   h4 {
     margin-bottom: 1.5rem;
+  }
+
+  .movies-container {
+    display: flex;
+
+    .movie-card-container {
+      background-repeat: no-repeat;
+      background-position: center;
+      backdrop-filter: blur(5px);
+      border-radius: 6px;
+      box-shadow: 0 0 5px #fff;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+      }
+      & > * {
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    .single {
+      border-radius: 6px;
+      width: 782px;
+
+      .movie-card-container {
+        position: absolute;
+        width: 457px;
+        height: 686px;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 7rem;
+        background-size: contain;
+
+        &::before {
+          background-color: $BLACK_OPACITY_60;
+        }
+      }
+    }
+
+    .grid-list {
+      .movie-card-container {
+        height: 336px;
+        background-size: cover;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 1rem;
+
+        &::before {
+          background-color: $BLACK_OPACITY_80;
+        }
+
+        .description {
+          margin-left: 1.5rem;
+          .name {
+            font-size: $FONT_SIZE_M;
+          }
+          .year-country,
+          .genres,
+          .show-more-btn button {
+            font-size: $FONT_SIZE_XS;
+          }
+
+          .show-more-btn button {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    .poster {
+      display: none;
+    }
   }
 }

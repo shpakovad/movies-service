@@ -1,0 +1,31 @@
+@use '../../../../lib/styles/variables' as *;
+
+.seeing-now-container {
+  .movie-card-container {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(5px);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $BLACK_OPACITY_80;
+      z-index: 1;
+    }
+
+    & > * {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}

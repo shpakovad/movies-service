@@ -8,15 +8,21 @@ import MovieCard from '@/app/components/ui/MovieCard/MovieCard';
 import './SeeingNow.scss';
 
 interface Props {
-  movies: Movie[];
+  data: Movie[];
 }
-export default function SeeingNow({ movies }: Props) {
+export default function SeeingNow({ data }: Props) {
   return (
-    <Carousel effect="fade" autoplay={{ dotDuration: true }}>
-      {movies.map((item) => {
+    <Carousel effect="fade" autoplay={{ dotDuration: true }} className="seeing-now-container">
+      {data.map((item) => {
         const movieYear = getYearFromString(item.premiered);
 
-        return <MovieCard movie={item} movieYear={movieYear} />;
+        return (
+          <MovieCard
+            movie={item}
+            movieYear={movieYear}
+            containerStyle={{ backgroundImage: `url(${item.image.original})` }}
+          />
+        );
       })}
     </Carousel>
   );
