@@ -1,6 +1,5 @@
-import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
-import {MOVIES_API} from '@/constants/constants';
-
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { MOVIES_API } from '@/constants/constants';
 
 export const tvmazeApi = createApi({
   reducerPath: 'tvmazeApi',
@@ -13,20 +12,15 @@ export const tvmazeApi = createApi({
     getMoviesByIds: build.query({
       queryFn: async (ids: string[], _api, _extraOptions, baseQuery) => {
         try {
-          const promises = ids.map(id =>
-              baseQuery(`shows/${id}`)
-          );
+          const promises = ids.map((id) => baseQuery(`shows/${id}`));
 
           const results = await Promise.allSettled(promises);
 
           const successfulResults = results
-              .filter((result) =>
-                  result.status === 'fulfilled' && result.value.data
-              )
-              .map((result: any) =>
-              {
-                return result.value.data
-              });
+            .filter((result) => result.status === 'fulfilled' && result.value.data)
+            .map((result: any) => {
+              return result.value.data;
+            });
 
           return { data: successfulResults };
         } catch (error: any) {
@@ -34,8 +28,7 @@ export const tvmazeApi = createApi({
         }
       },
     }),
-
   }),
 });
 
-export const { useGetMovieByIdQuery,useGetMoviesByIdsQuery } = tvmazeApi;
+export const { useGetMovieByIdQuery, useGetMoviesByIdsQuery } = tvmazeApi;
