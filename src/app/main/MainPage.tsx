@@ -2,7 +2,8 @@
 
 import { useGetMoviesByIdsQuery } from '@/lib/api/tvmazeApi';
 import { SEEING_NOW_MOVIES } from '@/constants/constants';
-import SeeingNow from '@/app/main/components/SeeingNow';
+import SeeingNow from '@/app/main/components/SeeingNow/SeeingNow';
+import Trending from '@/app/main/components/Trending/Trending';
 import Loading from '@/app/components/ui/Loading/Loading';
 
 import './MainPage.scss';
@@ -17,7 +18,10 @@ export default function MainPage() {
       ) : error || !data ? (
         <span>Something went wrong...</span>
       ) : (
-        <SeeingNow movies={data} />
+        <>
+          <SeeingNow movies={data} />
+          <Trending />
+        </>
       )}
     </div>
   );

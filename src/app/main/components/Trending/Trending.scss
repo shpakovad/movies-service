@@ -1,0 +1,9 @@
+@use '../../../../lib/styles/variables' as *;
+
+.trending-container {
+  @include font-display-header;
+  margin-top: 6rem;
+  h4 {
+    margin-bottom: 1.5rem;
+  }
+}
