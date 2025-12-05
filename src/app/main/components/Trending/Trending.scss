@@ -13,24 +13,15 @@
     display: flex;
 
     .movie-card-container {
-      background-repeat: no-repeat;
-      background-position: center;
-      backdrop-filter: blur(5px);
-      border-radius: 6px;
-      box-shadow: 0 0 5px #fff;
+      justify-content: flex-start;
 
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1;
+      .bg-image {
+        border-radius: 6px;
+        box-shadow: 0 0 10px $WHITE;
       }
-      & > * {
-        position: relative;
-        z-index: 2;
+      .overlay {
+        border-radius: 6px;
+        background-color: $BLACK_OPACITY_70;
       }
     }
 
@@ -46,24 +37,15 @@
         align-items: flex-end;
         padding-bottom: 7rem;
         background-size: contain;
-
-        &::before {
-          background-color: $BLACK_OPACITY_60;
-        }
       }
     }
 
     .grid-list {
       .movie-card-container {
         height: 336px;
-        background-size: cover;
         display: flex;
         align-items: flex-end;
         padding-bottom: 1rem;
-
-        &::before {
-          background-color: $BLACK_OPACITY_80;
-        }
 
         .description {
           margin-left: 1.5rem;

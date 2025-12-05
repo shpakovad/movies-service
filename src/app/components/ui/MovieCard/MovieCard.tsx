@@ -12,21 +12,34 @@ import './MovieCard.scss';
 interface Props {
   movieYear: number;
   movie: Movie;
-  containerStyle?: object;
   canWatch?: boolean;
   posterSize?: { width: number; height: number };
 }
 export default function MovieCard({
   movie,
   movieYear,
-  containerStyle = {},
   canWatch = true,
   posterSize,
 }: Props) {
   const { name, url, image, genres, network, id } = movie;
 
   return (
-    <div key={name} className="movie-card-container" style={containerStyle}>
+    <div key={name} className="movie-card-container">
+      {image?.original && (
+        <Image
+          src={image.original}
+          alt={`${name} background`}
+          fill
+          quality={75}
+          className="bg-image"
+          sizes="60vw"
+          priority={false}
+          loading="eager"
+        />
+      )}
+
+      <div className="overlay" />
+
       {posterSize && (
         <Image
           src={image.medium || noImage}

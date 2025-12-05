@@ -17,12 +17,7 @@ export default function SeeingNow({ data }: Props) {
         const movieYear = getYearFromString(item.premiered);
 
         return (
-          <MovieCard
-            movie={item}
-            movieYear={movieYear}
-            containerStyle={{ backgroundImage: `url(${item.image.original})` }}
-            posterSize={{ width: 210, height: 295 }}
-          />
+          <MovieCard movie={item} movieYear={movieYear} posterSize={{ width: 210, height: 295 }} />
         );
       })}
     </Carousel>

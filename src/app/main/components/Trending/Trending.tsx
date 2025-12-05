@@ -20,7 +20,6 @@ export default function Trending({ data }: Props) {
           <MovieCard
             movie={data[0]}
             movieYear={getYearFromString(data[0].premiered)}
-            containerStyle={{ backgroundImage: `url(${data[0].image.original})` }}
           />
         </div>
         <div className="grid-list">
@@ -32,7 +31,6 @@ export default function Trending({ data }: Props) {
                   <MovieCard
                     movie={item}
                     movieYear={movieYear}
-                    containerStyle={{ backgroundImage: `url(${item.image.original})` }}
                     canWatch={false}
                   />
                 </Col>
