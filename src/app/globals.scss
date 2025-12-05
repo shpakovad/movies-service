@@ -56,3 +56,14 @@ button {
     color-scheme: dark;
   }
 }
+
+@include mobile {
+  html,
+  body {
+    max-width: 100%;
+    min-width: unset;
+  }
+  html {
+    padding: 0;
+  }
+}

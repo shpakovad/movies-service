@@ -15,12 +15,7 @@ interface Props {
   canWatch?: boolean;
   posterSize?: { width: number; height: number };
 }
-export default function MovieCard({
-  movie,
-  movieYear,
-  canWatch = true,
-  posterSize,
-}: Props) {
+export default function MovieCard({ movie, movieYear, canWatch = true, posterSize }: Props) {
   const { name, url, image, genres, network, id } = movie;
 
   return (

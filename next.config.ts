@@ -2,25 +2,23 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-
   compiler: {
     // Удалить console.log в production
-    removeConsole: process.env.NODE_ENV === 'production' ? {
-      exclude: ['error', 'warn'],
-    } : false,
+    removeConsole:
+      process.env.NODE_ENV === 'production'
+        ? {
+            exclude: ['error', 'warn'],
+          }
+        : false,
 
     // Минификация CSS
     styledComponents: false,
   },
   experimental: {
     webpackBuildWorker: false,
-    optimizePackageImports: [
-      'antd',
-      '@ant-design/icons',
-    ],
+    optimizePackageImports: ['antd', '@ant-design/icons'],
     optimizeServerReact: true,
     serverMinification: true,
-
   },
 
   images: {

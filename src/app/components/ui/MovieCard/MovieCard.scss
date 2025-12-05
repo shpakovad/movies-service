@@ -59,3 +59,17 @@
     }
   }
 }
+
+@include mobile {
+  .movie-card-container {
+    .description {
+      margin-left: 0;
+      .name {
+        font-size: 20px;
+      }
+    }
+    .poster {
+      display: none;
+    }
+  }
+}
