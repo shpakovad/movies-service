@@ -1,9 +1,11 @@
 'use client';
 
-import { Button, Image } from 'antd';
+import { Button } from 'antd';
+import Image from 'next/image';
 import { CaretRightOutlined, DashOutlined } from '@ant-design/icons';
 import LinkButton from '@/app/components/ui/LinkButton/LinkButton';
 import { Movie } from '@/types/movie.interface';
+import noImage from '@/assets/images/no-image.png';
 
 import './MovieCard.scss';
 
@@ -12,18 +14,28 @@ interface Props {
   movie: Movie;
   containerStyle?: object;
   canWatch?: boolean;
+  posterSize?: { width: number; height: number };
 }
 export default function MovieCard({
   movie,
   movieYear,
   containerStyle = {},
   canWatch = true,
+  posterSize,
 }: Props) {
   const { name, url, image, genres, network, id } = movie;
 
   return (
     <div key={name} className="movie-card-container" style={containerStyle}>
-      <Image src={image.medium} alt="poster" preview={false} className="poster" />
+      {posterSize && (
+        <Image
+          src={image.medium || noImage}
+          alt="poster"
+          className="poster"
+          {...posterSize}
+          loading="eager"
+        />
+      )}
 
       <div className="description">
         <div className="name">{name}</div>

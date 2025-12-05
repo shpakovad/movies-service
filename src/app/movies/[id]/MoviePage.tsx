@@ -1,8 +1,9 @@
 'use client';
 
 import { useParams } from 'next/navigation';
+import Image from 'next/image';
 import { CaretRightOutlined } from '@ant-design/icons';
-import { Button, Image, Rate } from 'antd';
+import { Button, Rate } from 'antd';
 import noImage from '@/assets/images/no-image.png';
 import { useGetMovieByIdQuery, useGetMovieCastQuery } from '@/lib/api/tvmazeApi';
 import LinkButton from '@/app/components/ui/LinkButton/LinkButton';
@@ -42,10 +43,18 @@ export default function MoviePage() {
             src={image?.original}
             alt={name}
             className="hero-image"
-            height="calc(100vh - 81px)"
+            fill={true}
+            sizes="(max-width: 616px) 100vw, 33vw"
+            loading="eager"
           />
         ) : (
-          <Image src={noImage.src} alt={name} width="auto" height="calc(100vh - 81px)" />
+          <Image
+            src={noImage.src}
+            alt={name}
+            fill={true}
+            sizes="(max-width: 616px) 100vw, 33vw"
+            loading="eager"
+          />
         )}
 
         <div className="overlay" />

@@ -21,6 +21,7 @@ export default function SeeingNow({ data }: Props) {
             movie={item}
             movieYear={movieYear}
             containerStyle={{ backgroundImage: `url(${item.image.original})` }}
+            posterSize={{ width: 210, height: 295 }}
           />
         );
       })}
