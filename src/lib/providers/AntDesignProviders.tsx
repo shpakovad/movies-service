@@ -13,7 +13,14 @@ export function AntDesignProviders({ children }: Props) {
   return (
     <AntdRegistry>
       <StyleProvider layer>
-        <ConfigProvider>{children}</ConfigProvider>
+        <ConfigProvider
+            theme={{
+                token: {
+                    fontFamily: "'Roboto', sans-serif",
+                },
+            }}
+        >{children}
+        </ConfigProvider>
       </StyleProvider>
     </AntdRegistry>
   );

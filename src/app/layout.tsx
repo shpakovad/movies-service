@@ -8,7 +8,7 @@ import { AntDesignProviders } from '@/lib/providers/AntDesignProviders';
 import './globals.scss';
 
 const robotoSans = Roboto({
-  variable: '--font-geist-sans',
+  variable: '--font-roboto-sans',
   subsets: ['latin'],
 });
 

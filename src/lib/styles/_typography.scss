@@ -16,7 +16,6 @@ $LINE_HEIGHT_NORMAL: 1.2;
 $LINE_HEIGHT_RELAXED: 1.5;
 
 @mixin font-display-header($color: $WHITE) {
-  font-family: $FONT_FAMILY_PRIMARY;
   font-size: $FONT_SIZE_M;
   font-weight: $FONT_WEIGHT_BOLD;
   line-height: $LINE_HEIGHT_NORMAL;
@@ -25,7 +24,6 @@ $LINE_HEIGHT_RELAXED: 1.5;
 }
 
 @mixin font-display-title($color: $WHITE) {
-  font-family: $FONT_FAMILY_PRIMARY;
   font-size: $FONT_SIZE_XL;
   font-weight: $FONT_WEIGHT_BOLD;
   line-height: $LINE_HEIGHT_RELAXED;
