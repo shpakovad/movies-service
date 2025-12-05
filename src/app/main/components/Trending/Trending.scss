@@ -12,6 +12,10 @@
   .movies-container {
     display: flex;
 
+    .show-more-btn button {
+      margin-left: 0;
+    }
+
     .movie-card-container {
       justify-content: flex-start;
 
@@ -21,7 +25,6 @@
       }
       .overlay {
         border-radius: 6px;
-        background-color: $BLACK_OPACITY_70;
       }
     }
 

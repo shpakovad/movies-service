@@ -9,6 +9,10 @@
   z-index: 1;
   position: relative;
 
+  .show-more-btn{
+    font-weight: $FONT_WEIGHT_BOLD;
+  }
+
   .bg-image {
     object-fit: cover;
   }
