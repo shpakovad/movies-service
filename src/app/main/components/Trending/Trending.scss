@@ -5,6 +5,12 @@
   margin-top: 3rem;
   margin-bottom: 3rem;
 
+  .show-more-btn {
+    span {
+      font-weight: $FONT_WEIGHT_BOLD;
+    }
+  }
+
   h4 {
     margin-bottom: 1.5rem;
   }

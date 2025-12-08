@@ -3,5 +3,10 @@
 .seeing-now-container {
   .movie-card-container {
     height: 600px;
+    .show-more-btn {
+      span {
+        font-weight: $FONT_WEIGHT_BOLD;
+      }
+    }
   }
 }

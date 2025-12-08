@@ -1,13 +1,15 @@
 'use client';
 
+import { useCallback } from 'react';
 import { usePathname } from 'next/navigation';
 import { HEADER_ITEMS } from '@/constants/constants';
 import LinkButton from '@/app/components/ui/LinkButton/LinkButton';
+
 import './HeaderContainer.scss';
 
 export const HeaderPage = () => {
   const pathname = usePathname();
-  const activeLink = (path: string) => pathname === path;
+  const activeLink = useCallback((path: string) => pathname === path, [pathname]);
 
   return (
     <div className="header-container">

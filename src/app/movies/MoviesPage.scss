@@ -1,0 +1,55 @@
+@use '../../lib/styles/variables' as *;
+
+.movies-list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  .ant-card {
+    box-shadow: 0 0 10px $WHITE;
+    position: relative;
+
+    .ant-card-body {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .overlay {
+      background: $BLACK_OPACITY_80;
+    }
+
+    .ant-card-cover,
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .description {
+      position: relative;
+      z-index: 2;
+      color: $WHITE;
+      padding-bottom: 1rem;
+
+      .show-more-btn button {
+        background: none !important;
+        border: 1px solid $WHITE;
+      }
+
+      .name,
+      .year-country {
+        padding-bottom: 0.5rem;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -15,6 +15,13 @@ export const tvmazeApi = createApi({
       },
     }),
 
+    getMoviesList: build.query({
+      query: (page = 1) => {
+        return `shows?page=${page}`;
+      },
+      keepUnusedDataFor: 60,
+    }),
+
     getMoviesByIds: build.query({
       queryFn: async (ids: string[], _api, _extraOptions, baseQuery) => {
         try {
@@ -37,4 +44,9 @@ export const tvmazeApi = createApi({
   }),
 });
 
-export const { useGetMovieByIdQuery, useGetMoviesByIdsQuery, useGetMovieCastQuery } = tvmazeApi;
+export const {
+  useGetMovieByIdQuery,
+  useGetMoviesByIdsQuery,
+  useGetMovieCastQuery,
+  useGetMoviesListQuery,
+} = tvmazeApi;
