@@ -34,11 +34,20 @@
       position: relative;
       z-index: 2;
       color: $WHITE;
-      padding-bottom: 1rem;
+      padding: 1rem;
 
       .show-more-btn button {
         background: none !important;
         border: 1px solid $WHITE;
+        font-weight: $FONT_WEIGHT_BOLD;
+      }
+
+      .name {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 205px;
+        font-weight: $FONT_WEIGHT_BOLD;
       }
 
       .name,
