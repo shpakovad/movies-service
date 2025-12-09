@@ -1,0 +1,15 @@
+.grid-container {
+  overflow: hidden;
+
+  .row {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
