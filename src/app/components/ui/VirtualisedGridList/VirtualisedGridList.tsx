@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useLayoutEffect, useMemo, useRef } from 'react';
 import { Movie } from '@/types/movie.interface';
 import { useVirtualizer, useWindowVirtualizer } from '@tanstack/react-virtual';
 import { Card } from 'antd';
@@ -10,6 +10,7 @@ import { MovieDescription } from '@/app/components/ui/MovieDescription/MovieDesc
 import { chunkArray, generateColumns } from '@/lib/utils/virtualizedListUtils';
 
 import './VirtualisedGridList.scss';
+import { useDeviceDetection } from '@/lib/hooks/useDeviceDetection';
 
 interface Props {
   windowData: Array<Movie>;
@@ -20,9 +21,13 @@ export const VirtualisedGridList = ({ windowData, className }: Props) => {
   const parentRef = useRef<HTMLDivElement | null>(null);
   const parentOffsetRef = useRef(0);
 
-  const columns = generateColumns(4);
+  const { isMobile } = useDeviceDetection();
 
-  const data = chunkArray(windowData || [], 4);
+  const columnsCount = useMemo(() => (isMobile ? 1 : 4), [isMobile]);
+
+  const columns = useMemo(() => generateColumns(columnsCount), [columnsCount]);
+
+  const data = useMemo(() => chunkArray(windowData, columnsCount), [windowData, columnsCount]);
 
   useLayoutEffect(() => {
     parentOffsetRef.current = parentRef.current?.offsetTop ?? 0;

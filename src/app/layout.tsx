@@ -10,6 +10,8 @@ import './globals.scss';
 const robotoSans = Roboto({
   variable: '--font-roboto-sans',
   subsets: ['latin'],
+  display: 'swap',
+  preload: true,
 });
 
 export const metadata: Metadata = {

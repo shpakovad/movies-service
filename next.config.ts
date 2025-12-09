@@ -10,8 +10,6 @@ const nextConfig: NextConfig = {
             exclude: ['error', 'warn'],
           }
         : false,
-
-    // Минификация CSS
     styledComponents: false,
   },
   experimental: {
@@ -19,6 +17,20 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['antd', '@ant-design/icons'],
     optimizeServerReact: true,
     serverMinification: true,
+    optimizeCss: true,
+  },
+  async headers() {
+    return [
+      {
+        source: '/_next/static/css/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
   },
 
   images: {
@@ -34,7 +46,7 @@ const nextConfig: NextConfig = {
 
     unoptimized: false,
 
-    minimumCacheTTL: 60 * 60 * 24 * 7, // 7 дней
+    minimumCacheTTL: 60 * 60 * 24 * 7,
 
     ...(process.env.NODE_ENV === 'development' && {
       deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
