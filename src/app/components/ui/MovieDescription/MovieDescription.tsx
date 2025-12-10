@@ -40,7 +40,7 @@ export const MovieDescription = ({ movie, canWatch = true, withGenres = true }: 
             href={url}
             isNewWindow
             children={
-              <Button type="primary" icon={<CaretRightOutlined />}>
+              <Button icon={<CaretRightOutlined />}>
                 Watch now
               </Button>
             }

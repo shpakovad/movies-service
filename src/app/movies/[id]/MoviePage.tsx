@@ -105,7 +105,7 @@ export default function MoviePage() {
               isNewWindow
               className="watch-btn"
               children={
-                <Button type="primary" icon={<CaretRightOutlined />}>
+                <Button icon={<CaretRightOutlined />}>
                   Watch now
                 </Button>
               }

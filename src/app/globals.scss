@@ -2,13 +2,11 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
   }
 }
 
@@ -21,7 +19,6 @@ body {
 }
 
 body {
-  color: var(--foreground);
   background: var(--background);
   font-family: $FONT_FAMILY_PRIMARY;
   -webkit-font-smoothing: antialiased;
@@ -46,6 +43,7 @@ a {
 button {
   padding: 10px;
   background: linear-gradient(45deg, $VIOLET, $FUCHSIA, $VIOLET);
+  border: none;
   &:hover {
     opacity: 0.8;
   }
