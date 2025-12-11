@@ -2,11 +2,26 @@
 
 import { useGetMoviesByIdsQuery } from '@/lib/api/tvmazeApi';
 import { SEEING_NOW_MOVIES, TRADING_SERIES } from '@/constants/constants';
-import SeeingNow from '@/app/main/components/SeeingNow/SeeingNow';
-import Trending from '@/app/main/components/Trending/Trending';
+import dynamic from 'next/dynamic';
 import Loading from '@/app/components/ui/Loading/Loading';
 
 import './MainPage.scss';
+
+const SeeingNowDynamic = dynamic(
+  () => import('./components/SeeingNow/SeeingNow').then((mod) => mod.default),
+  {
+    loading: () => <Loading />,
+    ssr: false,
+  }
+);
+
+const TrendingDynamic = dynamic(
+  () => import('./components/Trending/Trending').then((mod) => mod.default),
+  {
+    loading: () => <Loading />,
+    ssr: false,
+  }
+);
 
 export default function MainPage() {
   const {
@@ -31,8 +46,8 @@ export default function MainPage() {
         <span>Something went wrong...</span>
       ) : (
         <>
-          <SeeingNow data={movies} />
-          <Trending data={series} />
+          <SeeingNowDynamic data={movies} />
+          <TrendingDynamic data={series} />
         </>
       )}
     </div>

@@ -26,6 +26,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+          body { margin: 0; background: #0a0a0a; }
+          .header { height: 56px; }
+        `,
+          }}
+        />
+      </head>
       <body className={`${robotoSans.variable}`}>
         <StoreProvider>
           <HeaderPage />

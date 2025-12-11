@@ -1,3 +1,5 @@
+'use client';
+
 import LinkButton from '@/app/components/ui/LinkButton/LinkButton';
 import { Button } from 'antd';
 import { CaretRightOutlined, DashOutlined } from '@ant-design/icons';

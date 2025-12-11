@@ -13,7 +13,7 @@ interface Props {
   posterSize?: { width: number; height: number };
 }
 export default function MovieCard({ movie, canWatch = true, posterSize }: Props) {
-  const { name, image, premiered } = movie;
+  const { name, image } = movie;
 
   return (
     <div key={name} className="movie-card-container">
@@ -26,7 +26,7 @@ export default function MovieCard({ movie, canWatch = true, posterSize }: Props)
           className="bg-image"
           sizes="60vw"
           priority={false}
-          loading="eager"
+          loading="lazy"
         />
       )}
 
@@ -38,7 +38,7 @@ export default function MovieCard({ movie, canWatch = true, posterSize }: Props)
           alt="poster"
           className="poster"
           {...posterSize}
-          loading="eager"
+          loading="lazy"
         />
       )}
 
