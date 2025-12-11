@@ -1,5 +1,6 @@
 'use client';
 
+import { Pagination } from 'antd';
 import { useGetMoviesListQuery } from '@/lib/api/tvmazeApi';
 import Loading from '@/app/components/ui/Loading/Loading';
 import ErrorPage from '@/app/components/ui/Error/ErrorPage';
@@ -15,7 +16,10 @@ export const MoviesPage = () => {
   ) : error || !data ? (
     <ErrorPage />
   ) : (
-    <VirtualisedGridList windowData={data} className="movies-list" />
+    <>
+      <VirtualisedGridList windowData={data} className="movies-list" />
+      <Pagination defaultCurrent={6} total={500} showSizeChanger={false} />
+    </>
   );
 };
 

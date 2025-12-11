@@ -76,6 +76,9 @@ export const VirtualisedGridList = ({ windowData, className }: Props) => {
             >
               {columnItems.map((column) => {
                 const item = data[row.index][column.index];
+                if (!item) {
+                  return null;
+                }
                 const { id, image, name } = item;
                 return (
                   <div key={column.key}>
