@@ -29,6 +29,11 @@ export const VirtualisedGridList = ({ windowData, className }: Props) => {
 
   const data = useMemo(() => chunkArray(windowData, columnsCount), [windowData, columnsCount]);
 
+  const cardSizes = useMemo(
+    () => (isMobile ? { width: 200, height: 300 } : { width: 240, height: 340 }),
+    [isMobile]
+  );
+
   useLayoutEffect(() => {
     parentOffsetRef.current = parentRef.current?.offsetTop ?? 0;
   }, []);
@@ -77,7 +82,7 @@ export const VirtualisedGridList = ({ windowData, className }: Props) => {
                     <Card
                       key={id}
                       hoverable
-                      style={{ width: 240, height: 340 }}
+                      style={cardSizes}
                       cover={
                         <Image
                           draggable={false}
@@ -85,7 +90,7 @@ export const VirtualisedGridList = ({ windowData, className }: Props) => {
                           src={image.medium || noImage}
                           width={200}
                           height={300}
-                          loading="eager"
+                          loading="lazy"
                         />
                       }
                     >
