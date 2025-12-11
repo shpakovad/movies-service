@@ -1,13 +1,8 @@
 @use '../lib/styles/variables' as *;
 
-:root {
-  --background: #ffffff;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-  }
+:root,
+html {
+  --background: #0a0a0a;
 }
 
 html,
@@ -29,30 +24,6 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-
-  &:hover {
-    color: $LIGHT_GRAY;
-  }
-}
-
-button {
-  padding: 10px;
-  background: linear-gradient(45deg, $VIOLET, $FUCHSIA, $VIOLET);
-  border: none;
-  &:hover {
-    opacity: 0.8;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
 
 @include mobile {

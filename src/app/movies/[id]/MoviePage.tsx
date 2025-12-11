@@ -104,11 +104,7 @@ export default function MoviePage() {
               href={url}
               isNewWindow
               className="watch-btn"
-              children={
-                <Button icon={<CaretRightOutlined />}>
-                  Watch now
-                </Button>
-              }
+              children={<Button icon={<CaretRightOutlined />}>Watch now</Button>}
             />
           )}
         </div>

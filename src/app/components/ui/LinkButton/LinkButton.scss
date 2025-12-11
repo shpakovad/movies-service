@@ -1,0 +1,27 @@
+@use '../../../../lib/styles/variables' as *;
+
+.link-container {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: $LIGHT_GRAY;
+  }
+
+  &.show-more-btn {
+    .ant-btn:hover {
+      color: $WHITE;
+    }
+  }
+
+  .ant-btn {
+    padding: 10px;
+    background: linear-gradient(45deg, $VIOLET, $FUCHSIA, $VIOLET);
+    border: none;
+
+    &:hover {
+      color: $BLACK_OPACITY_88;
+      opacity: 0.8;
+    }
+  }
+}

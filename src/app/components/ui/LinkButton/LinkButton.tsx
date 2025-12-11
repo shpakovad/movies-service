@@ -2,6 +2,7 @@
 
 import { ReactNode } from 'react';
 import Link from 'next/link';
+import './LinkButton.scss';
 
 interface Props {
   href: string;
@@ -12,10 +13,13 @@ interface Props {
 
 export function LinkButton(props: Props) {
   const { href, className = '', children, isNewWindow = false } = props;
+
+  const containerClassName = ['link-container', className].filter(Boolean).join(' ');
+
   return (
     <Link
       href={href}
-      className={className}
+      className={containerClassName}
       {...(isNewWindow && {
         target: '_blank',
       })}
