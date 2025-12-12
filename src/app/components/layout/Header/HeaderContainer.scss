@@ -5,6 +5,10 @@
   height: 56px;
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--background);
 
   a.active {
     background: linear-gradient(45deg, $VIOLET, $FUCHSIA, $VIOLET);
