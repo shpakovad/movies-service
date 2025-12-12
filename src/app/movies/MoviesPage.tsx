@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Button, Pagination } from 'antd';
 import { DownOutlined, UpOutlined } from '@ant-design/icons';
 import { useGetMoviesListQuery } from '@/lib/api/tvmazeApi';
@@ -8,13 +8,17 @@ import Loading from '@/app/components/ui/Loading/Loading';
 import ErrorPage from '@/app/components/ui/Error/ErrorPage';
 import VirtualisedGridList from '@/app/components/ui/VirtualisedGridList/VirtualisedGridList';
 import { useScrollDirection } from '@/lib/hooks/useScrollDirection';
+import { useQueryState } from '@/lib/hooks/useQueryState';
 
 import './MoviesPage.scss';
 
 export const MoviesPage = () => {
-  const { isAtBottom, bottomRef } = useScrollDirection();
+  const [page, setPage] = useState(1);
 
-  const { data, isLoading, error } = useGetMoviesListQuery(1);
+  const { isAtBottom, bottomRef } = useScrollDirection();
+  const { currentValue, setUrlParam } = useQueryState('page', page);
+
+  const { data, isLoading, error } = useGetMoviesListQuery(page);
 
   const buttonIcon = useMemo(() => (isAtBottom ? <UpOutlined /> : <DownOutlined />), [isAtBottom]);
 
@@ -41,6 +45,17 @@ export const MoviesPage = () => {
     }
   };
 
+  const onChangePage = (page: number) => {
+    setPage(page);
+    setUrlParam(page);
+  };
+
+  useEffect(() => {
+    if (currentValue !== page) {
+      setPage(currentValue);
+    }
+  }, []);
+
   return isLoading ? (
     <Loading />
   ) : error || !data ? (
@@ -49,7 +64,12 @@ export const MoviesPage = () => {
     <>
       <Button className="scroll-btn" onClick={handleScrollClick} icon={buttonIcon} />
       <VirtualisedGridList windowData={data} className="movies-list" />
-      <Pagination defaultCurrent={6} total={500} showSizeChanger={false} />
+      <Pagination
+        defaultCurrent={page}
+        total={350}
+        showSizeChanger={false}
+        onChange={onChangePage}
+      />
       <div ref={bottomRef} />
     </>
   );
