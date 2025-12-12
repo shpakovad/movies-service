@@ -108,3 +108,22 @@
     }
   }
 }
+
+.scroll-btn {
+  position: fixed;
+  right: 3rem;
+  top: 90vh;
+  border-radius: 50%;
+  background: unset;
+  border: 1px solid $DARK_GRAY;
+  height: 3rem;
+  width: 3rem;
+  color: $DARK_GRAY;
+  z-index: 2;
+
+  &:hover {
+    cursor: pointer;
+    color: $LIGHT_GRAY;
+    border-color: $LIGHT_GRAY;
+  }
+}
