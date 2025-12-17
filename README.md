@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🎬 Movies Service
+A modern web application for browsing, searching, and managing movie collections.
 
-## Getting Started
+✨ Features
+View detailed movie information (description, rating, cast, etc.)
+Virtualized lists for optimal performance with large catalogs
+Responsive and modern UI/UX
+Centralized state management with Redux Toolkit
+Optimized production builds
 
-First, run the development server:
+🛠️ Tech Stack
+Built with modern technologies:
+Framework: Next.js 16 (React 19, App Router)
+Language: TypeScript
+UI Library: Ant Design 5
+Styling: Sass, CSS Modules
+State Management: Redux Toolkit, React-Redux
+Performance: React Virtual (list virtualization)
+Build Tools:
+ESLint + TypeScript ESLint (code quality)
+Prettier (code formatting)
+PostCSS with PurgeCSS (CSS optimization)
 
-```bash
-npm run dev
+📦 Package.json Overview
+Key dependencies and scripts:
+
+Core Dependencies
+next@16.0.6 - React framework with SSR
+react@19.2.0 - Latest React version
+antd@5.28.0 - UI component library
+@reduxjs/toolkit@2.11.0 - Redux state management
+@tanstack/react-virtual@3.13.13 - List virtualization
+sharp@0.34.5 - Image optimization
+
+Development
+TypeScript 5 - Type safety
+ESLint 9 - Code linting
+Prettier - Code formatting
+Sass - CSS preprocessing
+
+🚀 Getting Started
+Prerequisites
+Node.js 18.17 or later
+npm, yarn, or pnpm
+
+Installation
+1. Clone the repository:
+git clone <your-repo-url>
+cd movies-service
+2. Install dependencies:
+   npm install
+# or
+yarn install
+# or
+pnpm install
+3. Run the development server:
+   npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Open http://localhost:3000 in your browser.
