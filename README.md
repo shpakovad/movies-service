@@ -1,9 +1,14 @@
 🎬 Movies Service
-
 A modern web application for browsing, searching, and managing movie collections.
 
+🌐 Live Demo
+Link to deployed application (e.g., Vercel/Netlify)
+
+📸 Screenshots
+Add interface screenshots here
 
 ✨ Features
+Search movies by title, genre, year
 
 View detailed movie information (description, rating, cast, etc.)
 
@@ -15,9 +20,7 @@ Centralized state management with Redux Toolkit
 
 Optimized production builds
 
-
 🛠️ Tech Stack
-
 Built with modern technologies:
 
 Framework: Next.js 16 (React 19, App Router)
@@ -32,7 +35,6 @@ State Management: Redux Toolkit, React-Redux
 
 Performance: React Virtual (list virtualization)
 
-
 Build Tools:
 
 ESLint + TypeScript ESLint (code quality)
@@ -41,13 +43,10 @@ Prettier (code formatting)
 
 PostCSS with PurgeCSS (CSS optimization)
 
-
 📦 Package.json Overview
-
 Key dependencies and scripts:
 
 Core Dependencies
-
 next@16.0.6 - React framework with SSR
 
 react@19.2.0 - Latest React version
@@ -61,7 +60,6 @@ antd@5.28.0 - UI component library
 sharp@0.34.5 - Image optimization
 
 Development
-
 TypeScript 5 - Type safety
 
 ESLint 9 - Code linting
@@ -70,11 +68,8 @@ Prettier - Code formatting
 
 Sass - CSS preprocessing
 
-
 🚀 Getting Started
-
 Prerequisites
-
 Node.js 18.17 or later
 
 npm, yarn, or pnpm
@@ -82,33 +77,21 @@ npm, yarn, or pnpm
 Installation
 
 1. Clone the repository:
-2. 
-git clone <your-repo-url>
-
-cd movies-service
+   git clone <your-repo-url>
+   cd movies-service
 
 2. Install dependencies:
-
    npm install
-3. 
-# or
-
-yarn install
-
-# or
-
-pnpm install
+    # or
+    yarn install
+    # or
+    pnpm install
 
 3. Run the development server:
-
    npm run dev
+    # or
+    yarn dev
+    # or
+    pnpm dev
 
-# or
-
-yarn dev
-
-# or
-
-pnpm dev
-
-4. Open http://localhost:3000 in your browser.
+Open http://localhost:3000 in your browser.
