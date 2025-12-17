@@ -23,7 +23,7 @@ Built with modern technologies:
 
 - UI Library: Ant Design 5
 
-- Styling: Sass, CSS Modules
+- Styling: Sass
 
 - State Management: Redux Toolkit, React-Redux
 
