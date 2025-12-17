@@ -1,4 +1,5 @@
 🎬 Movies Service
+
 A modern web application for browsing, searching, and managing movie collections.
 
 ✨ Features
