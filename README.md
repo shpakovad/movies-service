@@ -74,7 +74,7 @@ Node.js 18.17 or later
 
 npm, yarn, or pnpm
 
-Installation
+## Getting Started
 
 1. Clone the repository:
 git clone <your-repo-url>
