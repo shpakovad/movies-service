@@ -77,21 +77,21 @@ npm, yarn, or pnpm
 Installation
 
 1. Clone the repository:
-   git clone <your-repo-url>
-   cd movies-service
+git clone <your-repo-url>
+cd movies-service
 
 2. Install dependencies:
-   npm install
-    # or
-    yarn install
-    # or
-    pnpm install
+npm install
+# or
+yarn install
+# or
+pnpm install
 
 3. Run the development server:
-   npm run dev
-    # or
-    yarn dev
-    # or
-    pnpm dev
+npm run dev
+ # or
+yarn dev
+# or
+pnpm dev
 
 Open http://localhost:3000 in your browser.
