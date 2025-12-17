@@ -1,14 +1,8 @@
-🎬 Movies Service
+
+## 🎬 Movies Service
 A modern web application for browsing, searching, and managing movie collections.
 
-🌐 Live Demo
-Link to deployed application (e.g., Vercel/Netlify)
-
-📸 Screenshots
-Add interface screenshots here
-
-✨ Features
-Search movies by title, genre, year
+## ✨ Features
 
 View detailed movie information (description, rating, cast, etc.)
 
@@ -20,7 +14,7 @@ Centralized state management with Redux Toolkit
 
 Optimized production builds
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 Built with modern technologies:
 
 Framework: Next.js 16 (React 19, App Router)
@@ -43,7 +37,7 @@ Prettier (code formatting)
 
 PostCSS with PurgeCSS (CSS optimization)
 
-📦 Package.json Overview
+## 📦 Package.json Overview
 Key dependencies and scripts:
 
 Core Dependencies
@@ -68,13 +62,11 @@ Prettier - Code formatting
 
 Sass - CSS preprocessing
 
-🚀 Getting Started
+## 🚀 Getting Started
 Prerequisites
 Node.js 18.17 or later
 
 npm, yarn, or pnpm
-
-## Getting Started
 
 1. Clone the repository:
 
