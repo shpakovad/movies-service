@@ -17,17 +17,17 @@ Optimized production builds
 ## 🛠️ Tech Stack
 Built with modern technologies:
 
-Framework: Next.js 16 (React 19, App Router)
+-- Framework: Next.js 16 (React 19, App Router)
 
-Language: TypeScript
+-- Language: TypeScript
 
-UI Library: Ant Design 5
+-- UI Library: Ant Design 5
 
-Styling: Sass, CSS Modules
+-- Styling: Sass, CSS Modules
 
-State Management: Redux Toolkit, React-Redux
+-- State Management: Redux Toolkit, React-Redux
 
-Performance: React Virtual (list virtualization)
+-- Performance: React Virtual (list virtualization)
 
 Build Tools:
 
