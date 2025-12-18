@@ -1,12 +1,3 @@
-export interface MovieGenres {
-  score: number;
-  show: Movie;
-}
-
-export interface CurrentMovie {
-  cast?: string[] | null;
-  main: Movie;
-}
 
 interface Image {
   medium?: string;
@@ -43,11 +34,11 @@ export interface Movie {
 interface Network {
   id: number;
   name: string;
-  country?: ICountry;
+  country?: Country;
   officialSite: string | null;
 }
 
-interface ICountry {
+interface Country {
   name?: string;
   code?: string;
   timezone?: string;
@@ -61,11 +52,7 @@ interface Link {
   };
 }
 
-export interface IMoviesPageProps {
-  readyMoviesList?: Movie[];
-}
-
-export interface ICast {
+export interface Cast {
   character: {
     id: number;
     image: Image;
@@ -75,7 +62,7 @@ export interface ICast {
   };
   person: {
     birthday: string;
-    country: ICountry;
+    country: Country;
     deathday: string | null;
     gender: string;
     id: number;

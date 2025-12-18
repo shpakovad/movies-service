@@ -8,7 +8,7 @@ import noImage from '@/assets/images/no-image.png';
 import { useGetMovieByIdQuery, useGetMovieCastQuery } from '@/lib/api/tvmazeApi';
 import LinkButton from '@/app/components/ui/LinkButton/LinkButton';
 import { getYearFromString } from '@/lib/utils/dateUtils';
-import { ICast } from '@/types/movie.interface';
+import { Cast } from '@/types/movie.interface';
 import ErrorPage from '@/app/components/ui/Error/ErrorPage';
 import Loading from '@/app/components/ui/Loading/Loading';
 
@@ -88,7 +88,7 @@ export default function MoviePage() {
               <b>
                 <span>Starring: </span>
               </b>
-              {catsData.map((item: ICast, index: number) => {
+              {catsData.map((item: Cast, index: number) => {
                 const person = item.person.name;
                 return (
                   <span key={`${item.person.id}-${item.character.id}`}>
