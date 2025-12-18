@@ -2,9 +2,10 @@
 
 .header-container {
   @include font-display-header;
-  height: 56px;
+  height: 66px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 2;

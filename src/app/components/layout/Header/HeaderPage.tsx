@@ -4,6 +4,7 @@ import { useCallback } from 'react';
 import { usePathname } from 'next/navigation';
 import { HEADER_ITEMS } from '@/constants/constants';
 import LinkButton from '@/app/components/ui/LinkButton/LinkButton';
+import SearchInput from '@/app/components/ui/SearchInput/SearchInput';
 
 import './HeaderContainer.scss';
 
@@ -23,6 +24,7 @@ export const HeaderPage = () => {
           />
         ))}
       </nav>
+      <SearchInput />
     </div>
   );
 };
