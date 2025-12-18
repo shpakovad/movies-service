@@ -17,32 +17,25 @@ export const MoviesPage = () => {
 
   const { isAtBottom, bottomRef } = useScrollDirection();
   const { currentValue, setUrlParam } = useQueryState('page', page);
-
+  console.log(isAtBottom);
   const { data, isLoading, error } = useGetMoviesListQuery(page);
 
   const buttonIcon = useMemo(() => (isAtBottom ? <UpOutlined /> : <DownOutlined />), [isAtBottom]);
 
   const handleScrollClick = () => {
-    if (isAtBottom) {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      });
-    } else {
-      const scrollHeight = Math.max(
-        document.body.scrollHeight,
-        document.documentElement.scrollHeight,
-        document.body.offsetHeight,
-        document.documentElement.offsetHeight,
-        document.body.clientHeight,
-        document.documentElement.clientHeight
-      );
+    const scrollHeight = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight,
+      document.body.clientHeight,
+      document.documentElement.clientHeight
+    );
 
-      window.scrollTo({
-        top: scrollHeight,
-        behavior: 'smooth',
-      });
-    }
+    window.scrollTo({
+      top: scrollHeight,
+      behavior: 'smooth',
+    });
   };
 
   const onChangePage = (page: number) => {
@@ -62,7 +55,9 @@ export const MoviesPage = () => {
     <ErrorPage />
   ) : (
     <>
-      <Button className="scroll-btn" onClick={handleScrollClick} icon={buttonIcon} />
+      {!isAtBottom && (
+        <Button className="scroll-btn" onClick={handleScrollClick} icon={buttonIcon} />
+      )}
       <VirtualisedGridList windowData={data} className="movies-list" />
       <Pagination
         defaultCurrent={page}
