@@ -127,3 +127,11 @@
     border-color: $LIGHT_GRAY;
   }
 }
+
+@include mobile {
+  .scroll-btn{
+    width: 2rem;
+    height: 2rem;
+    right: 1rem;
+  }
+}
