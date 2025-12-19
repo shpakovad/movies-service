@@ -31,7 +31,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
           body { margin: 0; background: #0a0a0a; }
-          .header { height: 56px; }
+          .header { height: 66px; }
         `,
           }}
         />
