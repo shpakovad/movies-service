@@ -13,7 +13,7 @@ interface Props {
 export function AntDesignProviders({ children }: Props) {
   return (
     <AntdRegistry>
-      <StyleProvider layer>
+      <StyleProvider layer hashPriority="high" ssrInline>
         <ConfigProvider theme={theme}>{children}</ConfigProvider>
       </StyleProvider>
     </AntdRegistry>
