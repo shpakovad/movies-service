@@ -12,6 +12,7 @@ interface Props {
   canWatch?: boolean;
   posterSize?: { width: number; height: number };
 }
+
 export default function MovieCard({ movie, canWatch = true, posterSize }: Props) {
   const { name, image } = movie;
 
@@ -22,10 +23,8 @@ export default function MovieCard({ movie, canWatch = true, posterSize }: Props)
           src={image.original}
           alt={`${name} background`}
           fill
-          quality={75}
           className="bg-image"
           sizes="60vw"
-          priority={false}
           loading="lazy"
         />
       )}
