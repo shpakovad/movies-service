@@ -3,6 +3,11 @@
 .search-container {
   .ant-btn {
     background: $VIOLET;
+
+    &.ant-btn-variant-solid:not(:disabled):not(.ant-btn-disabled):hover {
+      background: $VIOLET;
+      opacity: 0.7;
+    }
   }
 
   .ant-input {

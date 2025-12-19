@@ -9,7 +9,7 @@ import { useGetMovieByIdQuery, useGetMovieCastQuery } from '@/lib/api/tvmazeApi'
 import LinkButton from '@/app/components/ui/LinkButton/LinkButton';
 import { getYearFromString } from '@/lib/utils/dateUtils';
 import { Cast } from '@/types/movie.interface';
-import ErrorPage from '@/app/components/ui/Error/ErrorPage';
+import { StatusPage } from '@/app/components/ui/StatusPage/StatusPage';
 import Loading from '@/app/components/ui/Loading/Loading';
 
 import './MoviePage.scss';
@@ -32,7 +32,7 @@ export default function MoviePage() {
   const ratingOutOf5 = rating.average ? rating.average / 2 : 0;
 
   return movieError ? (
-    <ErrorPage />
+    <StatusPage />
   ) : isMovieLoading ? (
     <Loading />
   ) : (

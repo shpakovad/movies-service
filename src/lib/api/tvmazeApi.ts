@@ -15,6 +15,12 @@ export const tvmazeApi = createApi({
       },
     }),
 
+    getQueryItems: build.query({
+      query: (query: string) => {
+        return `search/shows?q=${query}`;
+      },
+    }),
+
     getMoviesList: build.query({
       query: (page = 1) => {
         return `shows?page=${page}`;
@@ -49,4 +55,5 @@ export const {
   useGetMoviesByIdsQuery,
   useGetMovieCastQuery,
   useGetMoviesListQuery,
+  useGetQueryItemsQuery,
 } = tvmazeApi;

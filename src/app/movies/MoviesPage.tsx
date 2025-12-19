@@ -5,7 +5,7 @@ import { Button, Pagination } from 'antd';
 import { DownOutlined, UpOutlined } from '@ant-design/icons';
 import { useGetMoviesListQuery } from '@/lib/api/tvmazeApi';
 import Loading from '@/app/components/ui/Loading/Loading';
-import ErrorPage from '@/app/components/ui/Error/ErrorPage';
+import { StatusPage } from '@/app/components/ui/StatusPage/StatusPage';
 import VirtualisedGridList from '@/app/components/ui/VirtualisedGridList/VirtualisedGridList';
 import { useScrollDirection } from '@/lib/hooks/useScrollDirection';
 import { useQueryState } from '@/lib/hooks/useQueryState';
@@ -52,7 +52,7 @@ export const MoviesPage = () => {
   return isLoading ? (
     <Loading />
   ) : error || !data ? (
-    <ErrorPage />
+    <StatusPage />
   ) : (
     <>
       {!isAtBottom && (
