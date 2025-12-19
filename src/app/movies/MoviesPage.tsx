@@ -17,7 +17,7 @@ export const MoviesPage = () => {
 
   const { isAtBottom, bottomRef } = useScrollDirection();
   const { currentValue, setUrlParam } = useQueryState('page', page);
-  console.log(isAtBottom);
+
   const { data, isLoading, error } = useGetMoviesListQuery(page);
 
   const buttonIcon = useMemo(() => (isAtBottom ? <UpOutlined /> : <DownOutlined />), [isAtBottom]);
