@@ -38,14 +38,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
-        <link rel="preconnect" href="https://static.tvmaze.com" crossOrigin="anonymous" />
-        <link
-          rel="preload"
-          href={robotoSans.style.fontFamily}
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
       </head>
       <body className={`${robotoSans.variable}`}>
         <StoreProvider>

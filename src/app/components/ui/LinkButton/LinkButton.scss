@@ -9,12 +9,12 @@
   }
 
   &.show-more-btn {
-    .ant-btn:hover {
+    .action-btn:hover {
       color: $WHITE;
     }
   }
 
-  .ant-btn {
+  .action-btn {
     padding: 10px;
     background: linear-gradient(45deg, $VIOLET, $FUCHSIA, $VIOLET);
     border: none;

@@ -41,14 +41,18 @@ export const MovieDescription = ({ movie, canWatch = true, withGenres = true }: 
           <LinkButton
             href={url}
             isNewWindow
-            children={<Button icon={<CaretRightOutlined />}>Watch now</Button>}
+            children={
+              <Button className="action-btn" icon={<CaretRightOutlined />}>
+                Watch now
+              </Button>
+            }
           />
         )}
         <LinkButton
           href={`/movies/${id}`}
           className="show-more-btn"
           children={
-            <Button type="primary" icon={<DashOutlined />}>
+            <Button type="primary" className="action-btn" icon={<DashOutlined />}>
               Show more
             </Button>
           }
