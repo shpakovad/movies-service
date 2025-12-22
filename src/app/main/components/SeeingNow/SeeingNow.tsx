@@ -1,8 +1,10 @@
 'use client';
 
 import { Carousel } from 'antd';
-import { Movie } from '@/types/movie.interface';
+
 import MovieCard from '@/app/components/ui/MovieCard/MovieCard';
+
+import { Movie } from '@/types/movie.interface';
 
 import './SeeingNow.scss';
 

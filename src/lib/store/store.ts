@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
+
 import { tvmazeApi } from '@/lib/api/tvmazeApi';
 
 export const store = configureStore({

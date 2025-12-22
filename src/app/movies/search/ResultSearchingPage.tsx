@@ -1,11 +1,15 @@
 'use client';
 
 import { useMemo } from 'react';
+
 import { useSearchParams } from 'next/navigation';
-import { useGetQueryItemsQuery } from '@/lib/api/tvmazeApi';
+
 import Loading from '@/app/components/ui/Loading/Loading';
 import { StatusPage } from '@/app/components/ui/StatusPage/StatusPage';
 import VirtualisedGridList from '@/app/components/ui/VirtualisedGridList/VirtualisedGridList';
+
+import { useGetQueryItemsQuery } from '@/lib/api/tvmazeApi';
+
 import { Movie } from '@/types/movie.interface';
 
 import '../MoviesPage.scss';

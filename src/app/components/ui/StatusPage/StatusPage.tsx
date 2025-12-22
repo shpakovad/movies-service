@@ -1,11 +1,15 @@
 'use client';
 
 import React, { useMemo } from 'react';
+
 import { Layout } from 'antd';
+
 import Image from 'next/image';
+
+import LinkButton from '@/app/components/ui/LinkButton/LinkButton';
+
 import errorImage from '@/assets/images/error-image.svg';
 import noResultsImage from '@/assets/images/no-results-image.svg';
-import LinkButton from '@/app/components/ui/LinkButton/LinkButton';
 
 import './StatusPage.scss';
 

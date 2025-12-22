@@ -1,16 +1,22 @@
 'use client';
 
 import React, { useLayoutEffect, useMemo, useRef } from 'react';
-import { Movie } from '@/types/movie.interface';
-import { useVirtualizer, useWindowVirtualizer } from '@tanstack/react-virtual';
+
 import { Card } from 'antd';
+
+import { useVirtualizer, useWindowVirtualizer } from '@tanstack/react-virtual';
 import Image from 'next/image';
-import noImage from '@/assets/images/no-image.png';
+
 import { MovieDescription } from '@/app/components/ui/MovieDescription/MovieDescription';
+
+import noImage from '@/assets/images/no-image.png';
+
+import { useDeviceDetection } from '@/lib/hooks/useDeviceDetection';
 import { chunkArray, generateColumns } from '@/lib/utils/virtualizedListUtils';
 
+import { Movie } from '@/types/movie.interface';
+
 import './VirtualisedGridList.scss';
-import { useDeviceDetection } from '@/lib/hooks/useDeviceDetection';
 
 interface Props {
   windowData: Array<Movie>;

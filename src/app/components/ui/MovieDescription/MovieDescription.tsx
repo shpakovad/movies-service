@@ -1,10 +1,14 @@
 'use client';
 
-import LinkButton from '@/app/components/ui/LinkButton/LinkButton';
 import { Button } from 'antd';
+
 import { CaretRightOutlined, DashOutlined } from '@ant-design/icons';
-import { Movie } from '@/types/movie.interface';
+
+import LinkButton from '@/app/components/ui/LinkButton/LinkButton';
+
 import { getYearFromString } from '@/lib/utils/dateUtils';
+
+import { Movie } from '@/types/movie.interface';
 
 interface Props {
   movie: Movie;

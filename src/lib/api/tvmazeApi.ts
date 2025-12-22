@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+
 import { MOVIES_API } from '@/constants/constants';
 
 export const tvmazeApi = createApi({

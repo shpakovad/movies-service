@@ -1,10 +1,14 @@
-import '@ant-design/v5-patch-for-react-19';
 import { Suspense } from 'react';
+
+import '@ant-design/v5-patch-for-react-19';
+
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
+
 import HeaderPage from '@/app/components/layout/Header/HeaderPage';
-import { StoreProvider } from '@/lib/providers/StoreProvider';
+
 import { AntDesignProviders } from '@/lib/providers/AntDesignProviders';
+import { StoreProvider } from '@/lib/providers/StoreProvider';
 
 import './globals.scss';
 

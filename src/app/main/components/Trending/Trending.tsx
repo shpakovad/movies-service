@@ -1,10 +1,14 @@
 'use client';
 
 import { useMemo } from 'react';
+
 import { Col, Row } from 'antd';
-import { Movie } from '@/types/movie.interface';
+
 import MovieCard from '@/app/components/ui/MovieCard/MovieCard';
+
 import { useDeviceDetection } from '@/lib/hooks/useDeviceDetection';
+
+import { Movie } from '@/types/movie.interface';
 
 import './Trending.scss';
 

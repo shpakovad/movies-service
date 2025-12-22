@@ -1,16 +1,22 @@
 'use client';
 
-import { useParams } from 'next/navigation';
-import Image from 'next/image';
-import { CaretRightOutlined } from '@ant-design/icons';
 import { Button, Rate } from 'antd';
-import noImage from '@/assets/images/no-image.png';
-import { useGetMovieByIdQuery, useGetMovieCastQuery } from '@/lib/api/tvmazeApi';
+
+import { CaretRightOutlined } from '@ant-design/icons';
+
+import Image from 'next/image';
+import { useParams } from 'next/navigation';
+
 import LinkButton from '@/app/components/ui/LinkButton/LinkButton';
-import { getYearFromString } from '@/lib/utils/dateUtils';
-import { Cast } from '@/types/movie.interface';
-import { StatusPage } from '@/app/components/ui/StatusPage/StatusPage';
 import Loading from '@/app/components/ui/Loading/Loading';
+import { StatusPage } from '@/app/components/ui/StatusPage/StatusPage';
+
+import noImage from '@/assets/images/no-image.png';
+
+import { useGetMovieByIdQuery, useGetMovieCastQuery } from '@/lib/api/tvmazeApi';
+import { getYearFromString } from '@/lib/utils/dateUtils';
+
+import { Cast } from '@/types/movie.interface';
 
 import './MoviePage.scss';
 

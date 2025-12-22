@@ -1,5 +1,6 @@
-import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import { useCallback, useMemo } from 'react';
+
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 export const useQueryState = (key: string, defaultValue: number) => {
   const router = useRouter();

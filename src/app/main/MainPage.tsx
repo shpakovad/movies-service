@@ -1,9 +1,12 @@
 'use client';
 
-import { useGetMoviesByIdsQuery } from '@/lib/api/tvmazeApi';
-import { SEEING_NOW_MOVIES, TRADING_SERIES } from '@/constants/constants';
 import dynamic from 'next/dynamic';
+
 import Loading from '@/app/components/ui/Loading/Loading';
+
+import { SEEING_NOW_MOVIES, TRADING_SERIES } from '@/constants/constants';
+
+import { useGetMoviesByIdsQuery } from '@/lib/api/tvmazeApi';
 
 import './MainPage.scss';
 

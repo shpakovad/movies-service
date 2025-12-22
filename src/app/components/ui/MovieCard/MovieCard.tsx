@@ -1,9 +1,12 @@
 'use client';
 
 import Image from 'next/image';
-import { Movie } from '@/types/movie.interface';
-import noImage from '@/assets/images/no-image.png';
+
 import { MovieDescription } from '@/app/components/ui/MovieDescription/MovieDescription';
+
+import noImage from '@/assets/images/no-image.png';
+
+import { Movie } from '@/types/movie.interface';
 
 import './MovieCard.scss';
 

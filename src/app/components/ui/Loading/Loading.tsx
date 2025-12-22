@@ -1,8 +1,8 @@
 'use client';
 
-import { Flex, Spin } from 'antd';
-
 import React from 'react';
+
+import { Flex, Spin } from 'antd';
 
 export function Loading() {
   return (

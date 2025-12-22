@@ -1,6 +1,5 @@
 import { ThemeConfig } from 'antd';
 
-const FUCHSIA = '#fa2e93';
 const VIOLET = '#8919fa';
 
 export const theme: ThemeConfig = {

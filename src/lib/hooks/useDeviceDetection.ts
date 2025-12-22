@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import { MOBILE_DEVICE_WIDTH } from '@/constants/constants';
 
 export const useDeviceDetection = () => {

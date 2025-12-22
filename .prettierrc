@@ -8,15 +8,19 @@
   "endOfLine": "auto",
   "importOrder": [
     "^react$",
-    "^next(/.*)?$",
-    "^@/app(/.*)?$",
-    "^@/lib(/.*)?$",
-    "^@/components(/.*)?$",
-    "^../",
-    "^./",
+    "^antd$",
+    "^@ant-design",
+    "^@?\\w",
+    "^@/app/(.*)$",
+    "^@/assets/(.*)$",
+    "^@/constants/(.*)$",
+    "^@/lib/(.*)$",
+    "^@/types/(.*)$",
     "^[./]"
   ],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
-  "importOrderCaseInsensitive": true
+  "importOrderCaseInsensitive": true,
+  "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
+  "plugins": ["@trivago/prettier-plugin-sort-imports"]
 }

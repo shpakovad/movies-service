@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export const useScrollDirection = () => {
   const [isAtBottom, setIsAtBottom] = useState(false);
