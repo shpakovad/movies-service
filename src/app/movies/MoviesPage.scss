@@ -9,12 +9,12 @@
   gap: 1rem;
   position: relative;
 
-  .ant-card {
+  .card {
     box-shadow: 0 0 10px $WHITE;
     cursor: unset;
     position: relative;
 
-    .ant-card-body {
+    .body-card {
       display: flex;
       align-items: flex-end;
       justify-content: center;
@@ -26,7 +26,7 @@
       border-radius: 6px;
     }
 
-    .ant-card-cover,
+    .cover-card,
     .overlay {
       position: absolute;
       width: 100%;
@@ -39,7 +39,7 @@
       color: $WHITE;
       padding: 1rem;
 
-      .show-more-btn button {
+      .show-more-btn .action-btn {
         background: none !important;
         border: 1px solid $WHITE;
         font-weight: $FONT_WEIGHT_BOLD;
@@ -70,7 +70,7 @@
   }
 }
 
-.ant-pagination {
+.pagination {
   display: flex;
   align-items: center;
   width: 100%;
@@ -116,22 +116,24 @@
   border-radius: 50%;
   background: unset;
   border: 1px solid $DARK_GRAY;
-  height: 3rem;
-  width: 3rem;
+  height: 2rem;
+  width: 2rem;
   color: $DARK_GRAY;
   z-index: 2;
 
-  &:hover {
+  .scroll-icon {
+    position: relative;
+    top: 2px;
+  }
+
+  &:hover:not(:disabled) {
     cursor: pointer;
-    color: $LIGHT_GRAY;
-    border-color: $LIGHT_GRAY;
+    opacity: 0.7;
   }
 }
 
 @include mobile {
   .scroll-btn {
-    width: 2rem;
-    height: 2rem;
     right: 1rem;
   }
 }

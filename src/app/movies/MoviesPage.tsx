@@ -60,10 +60,25 @@ export const MoviesPage = () => {
   ) : (
     <>
       {!isAtBottom && (
-        <Button className="scroll-btn" onClick={handleScrollClick} icon={buttonIcon} />
+        <Button
+          classNames={{
+            root: 'scroll-btn',
+            icon: 'scroll-icon',
+          }}
+          styles={{
+            root: {
+              color: '#8a8a8a',
+              border: '1px solid #8a8a8a',
+              background: 'none',
+            },
+          }}
+          onClick={handleScrollClick}
+          icon={buttonIcon}
+        />
       )}
       <VirtualisedGridList windowData={data} className="movies-list" />
       <Pagination
+        className="pagination"
         defaultCurrent={page}
         total={350}
         showSizeChanger={false}

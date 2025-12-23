@@ -12,5 +12,8 @@ export const theme: ThemeConfig = {
       itemActiveColor: VIOLET,
       itemActiveColorHover: VIOLET,
     },
+    Button: {
+      defaultHoverBorderColor: 'none',
+    },
   },
 };

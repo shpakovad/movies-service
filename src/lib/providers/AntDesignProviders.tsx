@@ -6,7 +6,6 @@ import { ConfigProvider } from 'antd';
 
 import { StyleProvider } from '@ant-design/cssinjs';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
-import '@ant-design/v5-patch-for-react-19';
 
 import { theme } from '@/lib/styles/theme/themeConfig';
 

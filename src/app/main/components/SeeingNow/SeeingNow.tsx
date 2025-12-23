@@ -14,7 +14,7 @@ interface Props {
 
 export default function SeeingNow({ data }: Props) {
   return (
-    <Carousel effect="fade" autoplay={{ dotDuration: true }} className="seeing-now-container">
+    <Carousel className="seeing-now-container">
       {data.map((item) => {
         return <MovieCard movie={item} posterSize={{ width: 210, height: 295 }} />;
       })}

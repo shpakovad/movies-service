@@ -1,11 +1,11 @@
 'use client';
 
+import Image from 'next/image';
+import { useParams } from 'next/navigation';
+
 import { Button, Rate } from 'antd';
 
 import { CaretRightOutlined } from '@ant-design/icons';
-
-import Image from 'next/image';
-import { useParams } from 'next/navigation';
 
 import LinkButton from '@/app/components/ui/LinkButton/LinkButton';
 import Loading from '@/app/components/ui/Loading/Loading';
@@ -111,7 +111,17 @@ export default function MoviePage() {
               isNewWindow
               className="watch-btn"
               children={
-                <Button className="action-btn" icon={<CaretRightOutlined />}>
+                <Button
+                  classNames={{
+                    root: 'action-btn',
+                  }}
+                  styles={{
+                    root: {
+                      color: 'rgba(0, 0, 0, 0.88)',
+                    },
+                  }}
+                  icon={<CaretRightOutlined />}
+                >
                   Watch now
                 </Button>
               }

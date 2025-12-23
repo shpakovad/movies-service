@@ -46,7 +46,17 @@ export const MovieDescription = ({ movie, canWatch = true, withGenres = true }: 
             href={url}
             isNewWindow
             children={
-              <Button className="action-btn" icon={<CaretRightOutlined />}>
+              <Button
+                classNames={{
+                  root: 'action-btn',
+                }}
+                styles={{
+                  root: {
+                    color: 'rgba(0, 0, 0, 0.88)',
+                  },
+                }}
+                icon={<CaretRightOutlined />}
+              >
                 Watch now
               </Button>
             }
@@ -56,7 +66,13 @@ export const MovieDescription = ({ movie, canWatch = true, withGenres = true }: 
           href={`/movies/${id}`}
           className="show-more-btn"
           children={
-            <Button type="primary" className="action-btn" icon={<DashOutlined />}>
+            <Button
+              type="primary"
+              classNames={{
+                root: 'action-btn',
+              }}
+              icon={<DashOutlined />}
+            >
               Show more
             </Button>
           }

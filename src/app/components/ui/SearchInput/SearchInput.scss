@@ -1,20 +1,18 @@
 @use '../../../../lib/styles/variables' as *;
 
 .search-container {
-  .ant-btn {
+  .search-btn {
     background: $VIOLET;
 
-    &.ant-btn-variant-solid:not(:disabled):not(.ant-btn-disabled):hover {
+    &:not(:disabled):not(.ant-btn-disabled):hover {
       background: $VIOLET;
       opacity: 0.7;
     }
   }
 
-  .ant-input {
+  .search-input {
     padding: 3px 11px;
-  }
 
-  .ant-input-compact-item {
     &:hover,
     &:focus {
       border-color: $VIOLET;

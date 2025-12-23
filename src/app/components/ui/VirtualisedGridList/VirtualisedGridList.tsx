@@ -2,10 +2,11 @@
 
 import React, { useLayoutEffect, useMemo, useRef } from 'react';
 
+import Image from 'next/image';
+
 import { Card } from 'antd';
 
 import { useVirtualizer, useWindowVirtualizer } from '@tanstack/react-virtual';
-import Image from 'next/image';
 
 import { MovieDescription } from '@/app/components/ui/MovieDescription/MovieDescription';
 
@@ -92,6 +93,11 @@ export const VirtualisedGridList = ({ windowData, className }: Props) => {
                       key={id}
                       hoverable
                       style={cardSizes}
+                      classNames={{
+                        root: 'card',
+                        body: 'body-card',
+                        cover: 'cover-card',
+                      }}
                       cover={
                         <Image
                           draggable={false}

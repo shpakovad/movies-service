@@ -1,9 +1,9 @@
 import { Suspense } from 'react';
 
-import '@ant-design/v5-patch-for-react-19';
-
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
+
+import '@ant-design/v5-patch-for-react-19';
 
 import HeaderPage from '@/app/components/layout/Header/HeaderPage';
 

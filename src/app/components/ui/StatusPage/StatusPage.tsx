@@ -2,9 +2,9 @@
 
 import React, { useMemo } from 'react';
 
-import { Layout } from 'antd';
-
 import Image from 'next/image';
+
+import { Layout } from 'antd';
 
 import LinkButton from '@/app/components/ui/LinkButton/LinkButton';
 

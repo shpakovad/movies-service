@@ -8,6 +8,7 @@
   "endOfLine": "auto",
   "importOrder": [
     "^react$",
+    "^next",
     "^antd$",
     "^@ant-design",
     "^@?\\w",

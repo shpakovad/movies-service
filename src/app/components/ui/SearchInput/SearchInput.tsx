@@ -2,11 +2,11 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
+import { useRouter, useSearchParams } from 'next/navigation';
+
 import { Button, Input, Space } from 'antd';
 
 import { SearchOutlined } from '@ant-design/icons';
-
-import { useRouter, useSearchParams } from 'next/navigation';
 
 import './SearchInput.scss';
 
@@ -37,12 +37,20 @@ export const SearchInput = () => {
       <Space.Compact style={{ width: '100%' }}>
         <Input
           name="search"
+          className="search-input"
           placeholder="type to search"
           value={searchValue || ''}
           onChange={(e) => handleOnInputChange(e.target.value)}
           onPressEnter={handleOnSearch}
         />
-        <Button type="primary" icon={<SearchOutlined />} onClick={handleOnSearch} />
+        <Button
+          type="primary"
+          classNames={{
+            root: 'search-btn',
+          }}
+          icon={<SearchOutlined />}
+          onClick={handleOnSearch}
+        />
       </Space.Compact>
     </nav>
   );
