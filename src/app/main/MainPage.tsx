@@ -8,8 +8,6 @@ import { SEEING_NOW_MOVIES, TRADING_SERIES } from '@/constants/constants';
 
 import { useGetMoviesByIdsQuery } from '@/lib/api/tvmazeApi';
 
-import './MainPage.scss';
-
 const SeeingNowDynamic = dynamic(
   () => import('./components/SeeingNow/SeeingNow').then((mod) => mod.default),
   {

@@ -18,12 +18,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.carousel-dots {
-  li {
-    margin-right: 12px !important;
-  }
-}
-
 @include mobile {
   html {
     padding: 0;
