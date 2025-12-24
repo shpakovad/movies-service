@@ -1,5 +1,7 @@
 'use client';
 
+import { useLayoutEffect, useState } from 'react';
+
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
 
@@ -21,6 +23,8 @@ import { Cast } from '@/types/movie.interface';
 import './MoviePage.scss';
 
 export default function MoviePage() {
+  const [isPosterLoaded, setIsPosterLoaded] = useState<boolean>(false);
+
   const { id: movieId } = useParams<{ id: string }>();
 
   const {
@@ -28,7 +32,17 @@ export default function MoviePage() {
     isError: movieError,
     isLoading: isMovieLoading,
   } = useGetMovieByIdQuery(movieId, { skip: !movieId });
-  const { data: catsData } = useGetMovieCastQuery(movieId, { skip: !movieId });
+  const { data: catsData, isLoading: isLoadingCastData } = useGetMovieCastQuery(movieId, {
+    skip: !movieId,
+  });
+
+  useLayoutEffect(() => {
+    const timer = setTimeout(() => {
+      setIsPosterLoaded(true);
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   if (!movieData) return null;
 
@@ -39,7 +53,7 @@ export default function MoviePage() {
 
   return movieError ? (
     <StatusPage />
-  ) : isMovieLoading ? (
+  ) : isMovieLoading || isLoadingCastData || !isPosterLoaded ? (
     <Loading />
   ) : (
     <div className="movie-container">
@@ -58,6 +72,7 @@ export default function MoviePage() {
             src={noImage.src}
             alt={name}
             fill={true}
+            className="hero-image"
             sizes="(max-width: 616px) 100vw, 33vw"
             loading="eager"
           />
