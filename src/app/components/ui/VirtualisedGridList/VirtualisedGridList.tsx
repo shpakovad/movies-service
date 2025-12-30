@@ -102,7 +102,7 @@ export const VirtualisedGridList = ({ windowData, className }: Props) => {
                         <Image
                           draggable={false}
                           alt={name}
-                          src={image.medium || noImage}
+                          src={image?.medium || noImage}
                           width={200}
                           height={300}
                           loading="lazy"

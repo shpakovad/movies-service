@@ -79,31 +79,14 @@
   justify-content: center;
   margin: 2rem 0;
 
-  .ant-pagination-jump-prev,
-  .ant-pagination-jump-next {
-    &:hover {
-      .anticon {
-        color: $VIOLET;
-      }
-    }
-  }
-
-  .ant-pagination-disabled .ant-pagination-item-link {
-    color: $WHITE;
-    opacity: 0.5;
-  }
-
-  .ant-pagination-item {
+  .item-pagination {
     font-weight: $FONT_WEIGHT_REGULAR;
     margin-right: 0.5rem;
 
-    &.ant-pagination-item-active {
-      border-color: $VIOLET;
-    }
-
     &:hover {
-      border-color: $VIOLET;
       background: $WHITE;
+      border: 1px solid $VIOLET;
+
       a {
         color: $VIOLET;
       }

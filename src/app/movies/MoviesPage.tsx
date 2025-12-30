@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 
 import { Button, Pagination } from 'antd';
 
@@ -78,7 +78,14 @@ export const MoviesPage = () => {
       )}
       <VirtualisedGridList windowData={data} className="movies-list" />
       <Pagination
-        className="pagination"
+        classNames={{
+          root: 'pagination',
+          item: 'item-pagination',
+        }}
+        // itemRender={(page,type)=>{
+        //   console.log({page,type})
+        //   return <div className={type}>{page}</div>
+        // }}
         defaultCurrent={page}
         total={350}
         showSizeChanger={false}
