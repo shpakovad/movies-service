@@ -82,10 +82,6 @@ export const MoviesPage = () => {
           root: 'pagination',
           item: 'item-pagination',
         }}
-        // itemRender={(page,type)=>{
-        //   console.log({page,type})
-        //   return <div className={type}>{page}</div>
-        // }}
         defaultCurrent={page}
         total={350}
         showSizeChanger={false}
