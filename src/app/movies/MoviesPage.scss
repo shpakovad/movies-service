@@ -92,6 +92,21 @@
       }
     }
   }
+
+  .ant-pagination-item-active {
+    a {
+      color: $VIOLET !important;
+    }
+
+    &:hover {
+      background: $VIOLET !important;
+      border-color: $VIOLET !important;
+
+      a {
+        color: $WHITE !important;
+      }
+    }
+  }
 }
 
 .scroll-btn {
