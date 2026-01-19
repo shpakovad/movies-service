@@ -83,27 +83,16 @@
     font-weight: $FONT_WEIGHT_REGULAR;
     margin-right: 0.5rem;
 
+    .link-item.active a {
+      color: $VIOLET;
+    }
+
     &:hover {
       background: $WHITE;
       border: 1px solid $VIOLET;
 
       a {
         color: $VIOLET;
-      }
-    }
-  }
-
-  .ant-pagination-item-active {
-    a {
-      color: $VIOLET !important;
-    }
-
-    &:hover {
-      background: $VIOLET !important;
-      border-color: $VIOLET !important;
-
-      a {
-        color: $WHITE !important;
       }
     }
   }

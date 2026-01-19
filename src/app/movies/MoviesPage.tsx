@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { ReactNode, useEffect, useMemo, useState } from 'react';
 
 import { Button, Pagination } from 'antd';
 
@@ -52,7 +52,7 @@ export const MoviesPage = () => {
       setPage(currentValue);
     }
   }, []);
-
+  console.log(currentValue);
   return isLoading ? (
     <Loading />
   ) : error || !data ? (
@@ -81,6 +81,12 @@ export const MoviesPage = () => {
         classNames={{
           root: 'pagination',
           item: 'item-pagination',
+        }}
+        itemRender={(page, type, originalElement) => {
+          const linkItemCLass = ['link-item', currentValue === page && 'active']
+            .filter(Boolean)
+            .join(' ');
+          return <span className={linkItemCLass}>{originalElement}</span>;
         }}
         defaultCurrent={page}
         total={350}
