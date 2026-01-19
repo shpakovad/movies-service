@@ -2,6 +2,9 @@
 ## 🎬 Movies Service
 A modern web application for browsing, searching, and managing movie collections.
 
+## 🌐 Live Demo
+**👉 [See Demo](https://movies-service-nine.vercel.app/)**
+
 ## ✨ Features
 
 View detailed movie information (description, rating, cast, etc.)
