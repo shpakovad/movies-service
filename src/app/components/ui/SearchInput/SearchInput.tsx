@@ -18,7 +18,9 @@ export const SearchInput = () => {
 
   const query = useMemo(() => searchParams.get('q'), [searchParams]);
 
-  const handleOnInputChange = (value: string) => setSearchValue(value);
+  const handleOnInputChange = (value: string) => {
+    setSearchValue(value);
+  };
 
   const handleOnSearch = useCallback(() => {
     if (searchValue) {
@@ -36,6 +38,7 @@ export const SearchInput = () => {
     <nav className="search-container">
       <Space.Compact style={{ width: '100%' }}>
         <Input
+          allowClear
           name="search"
           className="search-input"
           placeholder="type to search"
