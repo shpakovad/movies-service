@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 const criticalCSS = `
   * { box-sizing: border-box; padding: 0; margin: 0; }
-  body { margin: 0 auto; background: #0a0a0a; padding: 0 1rem; min-width: 1200px; max-width: 1300px; } 
+  body { background: #0a0a0a; } 
   .header-container { height: 66px; background: #0a0a0a; }
   @media (max-width: 768px) {
     html, body { max-width: 100%; min-width: unset; }
